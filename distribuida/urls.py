@@ -19,5 +19,6 @@ from API import views
 
 urlpatterns = [
     url('admin/', admin.site.urls),
-    url('rest/', views.REST.as_view())
+    url('rest/', views.REST.as_view()),
+    url('upload/', views.FileUploadView.as_view())
 ]
