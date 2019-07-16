@@ -1,8 +1,14 @@
-Django==2.2.2
+Django==2.2.3
+django-cors-headers==3.0.2
 django-filter==2.1.0
 djangorestframework==3.9.4
+gunicorn==19.9.0
 Markdown==3.1.1
+numpy==1.15.2
 pip-reqs==0.8.0
 pkg-resources==0.0.0
+python-speech-features==0.5
 pytz==2019.1
+scikit-learn==0.19.2
+scipy==1.1.0
 sqlparse==0.3.0
