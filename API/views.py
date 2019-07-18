@@ -7,12 +7,13 @@ from rest_framework.response import Response
 from Code import GenderIdentifier
 # Create your views here.
 from .serializers import FileSerializer
+import os
+import glob
+import shutil
 
 
 class FileUploadView(APIView):
     parser_class = (FileUploadParser,)
-    authentication_classes = []
-    permission_classes = []
     def post(self, request, *args, **kwargs):
 
       file_serializer = FileSerializer(data=request.data)
@@ -31,6 +32,8 @@ class REST(APIView):
             return ''.join(map(str, args))
         gender_identifier = GenderIdentifier.GenderIdentifier("audio", "females.gmm", "males.gmm")
         winner=gender_identifier.process()
+        shutil.rmtree('audio/')
+        os.mkdir('audio/')
         if winner=='male':
             winner='Hombre'
         if winner=='female':
