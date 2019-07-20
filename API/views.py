@@ -38,6 +38,8 @@ class REST(APIView):
             winner='Hombre'
         if winner=='female':
             winner='Mujer'
+        else:
+            winner='error'
         data = {
             "edad":'Edad',
             "genero":winner
