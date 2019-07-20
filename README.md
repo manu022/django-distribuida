@@ -3,8 +3,9 @@ Servidor Django para el proyecto de Computación Distribuida 2019 UTEM que otorg
 
 ## Requisitos
 
-Python 3.6
-pip
+	Python 3.6
+
+	pip
 
 ### Para Instalar los paquetes necesarios
 
@@ -12,12 +13,13 @@ pip install -r requirements.txt
 
 ### Realizar migraciones
 
-python manage.py makemigrations
-python manage.py migrate
+	python manage.py makemigrations
+
+	python manage.py migrate
 
 ### Iniciar servidor
 
-python manage.py runserver 0.0.0.0:8000
+	python manage.py runserver 0.0.0.0:8000
 
 ### URL Servicios
 
