@@ -20,6 +20,7 @@ class GenderIdentifier:
 
     def process(self):
         files = self.get_file_paths(self.path)
+        winner='error'
         # read the test directory and get the list of test audio files
         for file in files:
             self.total_sample += 1
