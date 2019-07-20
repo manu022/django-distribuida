@@ -22,6 +22,7 @@ class GenderIdentifier:
         files = self.get_file_paths(self.path)
         winner='error'
         # read the test directory and get the list of test audio files
+        winner='error'
         for file in files:
             self.total_sample += 1
             print("%10s %8s %1s" % ("--> TESTING", ":", os.path.basename(file)))
