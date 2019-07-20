@@ -7,6 +7,7 @@ from rest_framework.response import Response
 from Code import GenderIdentifier
 # Create your views here.
 from .serializers import FileSerializer
+from .models import File
 import os
 import glob
 import shutil
