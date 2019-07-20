@@ -19,7 +19,8 @@ python manage.py migrate
 
 python manage.py runserver 0.0.0.0:8000
 
-#URL Servicios
+###URL Servicios
 
-http://0.0.0.0:8000/upload/ : Se encarga de recibir el archivo 
-http://0.0.0.0:8000/rest/ : Entrega los resultados luego de su análisis, posterior a eso el archivo es eliminado.
+	http://0.0.0.0:8000/upload/ : Se encarga de recibir el archivo 
+
+	http://0.0.0.0:8000/rest/ : Entrega los resultados luego de su análisis, posterior a eso el archivo es eliminado.
