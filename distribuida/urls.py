@@ -24,7 +24,7 @@ from rest_framework_swagger.views import get_swagger_view
 schema_view = get_swagger_view(title='Distribuida API')
 
 urlpatterns = [
-    url('', schema_view),
+    url('swagger/', schema_view),
     url('admin/', admin.site.urls),
     url('rest/', views.REST.as_view()),
     url('upload/', views.FileUploadView.as_view())
