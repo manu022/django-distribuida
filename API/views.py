@@ -1,4 +1,3 @@
-from __future__ import print_function
 from django.shortcuts import render
 from rest_framework import status
 from rest_framework.parsers import FileUploadParser
@@ -8,24 +7,22 @@ from rest_framework.response import Response
 from Code import GenderIdentifier
 # Create your views here.
 from .serializers import FileSerializer
-from .parser import PlainTextParser
 import os
 import glob
 import shutil
 
-import scipy.io.wavfile as wavf
-import numpy as np
 
 class FileUploadView(APIView):
-    parser_class = [PlainTextParser]
+    parser_class = (FileUploadParser,)
     def post(self, request, *args, **kwargs):
-        audio = request.data['']
-        fs = 44100
-        out_f = 'audio/out.wav'
-        wavf.write(out_f, fs, audio)
-        return Response(status=204)
 
-      
+      file_serializer = FileSerializer(data=request.data)
+
+      if file_serializer.is_valid():
+          file_serializer.save()
+          return Response(file_serializer.data, status=status.HTTP_201_CREATED)
+      else:
+          return Response(file_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class REST(APIView):
     authentication_classes = []

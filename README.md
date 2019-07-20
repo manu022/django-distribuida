@@ -1,4 +1,4 @@
-#Django API-REST
+# Django API-REST
 Servidor Django para el proyecto de Computación Distribuida 2019 UTEM que otorga dos servicios Rest.
 
 ## Requisitos
@@ -19,7 +19,7 @@ python manage.py migrate
 
 python manage.py runserver 0.0.0.0:8000
 
-###URL Servicios
+### URL Servicios
 
 	http://0.0.0.0:8000/upload/ : Se encarga de recibir el archivo 
 
